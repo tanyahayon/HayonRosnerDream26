@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תאילנד 2026 - חיון ורוזנר</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Heebo', sans-serif; background-color: #0B0C10; color: #C5C6C7; background-image: radial-gradient(circle at 15% 50%, rgba(255, 0, 255, 0.08), transparent 25%), radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.08), transparent 25%); background-attachment: fixed; }
+        h1, h2, h3 { font-family: 'Rubik', sans-serif; }
+        .neon-text-pink { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+        .neon-text-cyan { color: #00ffff; text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; }
+        .neon-text-yellow { color: #ffff00; text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00; }
+        .neon-border-pink { border: 2px solid #ff00ff; box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
+        .neon-border-cyan { border: 2px solid #00ffff; box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+        .neon-border-yellow { border: 2px solid #ffff00; box-shadow: 0 0 10px rgba(255, 255, 0, 0.5); }
+        .hover-grow { transition: transform 0.3s ease; }
+        .hover-grow:hover { transform: translateY(-5px); }
+        #modal-overlay { backdrop-filter: blur(5px); }
+        .modal-content-box { background: linear-gradient(135deg, #1A1A24 0%, #0B0C10 100%); }
+    </style>
+</head>
+<body class="min-h-screen relative pb-20">
+
+    <header class="text-center pt-12 pb-8 px-4">
+        <h1 class="text-4xl md:text-6xl font-black neon-text-yellow mb-2">THAI<span class="neon-text-pink">LAND</span> 2026</h1>
+        <h2 class="text-xl md:text-2xl font-bold text-white">משפחות חיון ורוזנר 🌴</h2>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-5xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            
+            <div onclick="openModal('bkk-start')" class="cursor-pointer neon-border-cyan rounded-2xl p-6 hover-grow bg-gray-800/50 text-center">
+                <i class="fas fa-city text-3xl text-cyan-400 mb-2"></i>
+                <h4 class="text-xl font-bold text-white">בנגקוק (נחיתה)</h4>
+            </div>
+
+            <div onclick="openModal('samui-1')" class="cursor-pointer neon-border-yellow rounded-2xl p-6 hover-grow bg-gray-800/50 text-center">
+                <i class="fas fa-umbrella-beach text-3xl text-yellow-400 mb-2"></i>
+                <h4 class="text-xl font-bold text-white">קוסמוי (פתיחה)</h4>
+            </div>
+
+            <div onclick="openModal('phangan')" class="cursor-pointer neon-border-pink rounded-2xl p-6 hover-grow bg-gray-800/50 text-center md:col-span-2 lg:col-span-1">
+                <i class="fas fa-music text-3xl text-pink-400 mb-2"></i>
+                <h4 class="text-xl font-bold text-white">קופנגן (הוילה!)</h4>
+            </div>
+
+            <div onclick="openModal('samui-2')" class="cursor-pointer neon-border-yellow rounded-2xl p-6 hover-grow bg-gray-800/50 text-center">
+                <i class="fas fa-elephant text-3xl text-yellow-400 mb-2"></i>
+                <h4 class="text-xl font-bold text-white">קוסמוי (סיבוב 2)</h4>
+            </div>
+
+            <div onclick="openModal('bkk-end')" class="cursor-pointer neon-border-cyan rounded-2xl p-6 hover-grow bg-gray-800/50 text-center md:col-span-2">
+                <i class="fas fa-shopping-bag text-3xl text-cyan-400 mb-2"></i>
+                <h4 class="text-xl font-bold text-white">בנגקוק (סיום)</h4>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal-overlay" class="fixed inset-0 bg-black/80 z-40 hidden flex items-center justify-center p-4" onclick="closeModal(event)">
+        <div id="modal-container" class="modal-content-box neon-border-pink rounded-3xl w-full max-w-2xl max-h-[85vh] overflow-y-auto relative p-8">
+            <button onclick="forceCloseModal()" class="absolute top-4 right-4 text-white hover:text-pink-500"><i class="fas fa-times text-2xl"></i></button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        const modalContent = {
+            'bkk-start': `
+                <h2 class="text-3xl font-bold text-white mb-4">בנגקוק - נחיתה</h2>
+                <p class="text-gray-300">לילה ראשון להתאוששות במלון Grand BS. מנוחה והתארגנות לפני הטיסה לאיים.</p>
+            `,
+            'samui-1': `
+                <h2 class="text-3xl font-bold text-white mb-4">קוסמוי - התחלה</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>3 לילות ב-Skye Beach. אווירה רגועה, בריכה וים.</p>
+                </div>
+            `,
+            'phangan': `
+                <h2 class="text-3xl font-bold text-white mb-4">קופנגן - החיים הטובים</h2>
+                <div class="space-y-4 text-gray-300">
+                    <div class="bg-gray-800 p-4 rounded-xl border-l-4 border-pink-500">
+                        <h3 class="font-bold text-pink-400">🌕 מסיבת פולמון (29/07/2026)</h3>
+                        <p>האירוע המרכזי! מגיעים לחוף, צובעים את הילדים בנאון, נהנים מהאווירה והמוזיקה.</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-xl border-l-4 border-yellow-500">
+                        <h3 class="font-bold text-yellow-400">🎂 יום הולדת לליאם (09/08/2026)</h3>
+                        <p>היום האחרון שלכם בקופנגן! יום חגיגי במיוחד בוילה.</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-xl border-l-4 border-cyan-500">
+                        <h3 class="font-bold text-cyan-400">יעדים נוספים</h3>
+                        <ul class="list-disc pr-4 space-y-1">
+                            <li>שוק הלילה של יום שבת (חובה!)</li>
+                            <li>מפל פאנג (Phaeng Waterfall)</li>
+                        </ul>
+                    </div>
+                </div>
+            `,
+            'samui-2': `
+                <h2 class="text-3xl font-bold text-white mb-4">קוסמוי - חוויות וחיות</h2>
+                <div class="space-y-3 text-gray-300">
+                    <p>רשימת האטרקציות המבוקשת:</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <li class="bg-gray-800 p-2 rounded">🐬 שייט דולפינים ורודים</li>
+                        <li class="bg-gray-800 p-2 rounded">⛵ שייט 42 האיים (Ang Thong)</li>
+                        <li class="bg-gray-800 p-2 rounded">🐘 חוות פילים טיפולית</li>
+                        <li class="bg-gray-800 p-2 rounded">🌊 פארק מים (Pink Elephant)</li>
+                        <li class="bg-gray-800 p-2 rounded">🐅 ספארי וטיגריסים</li>
+                        <li class="bg-gray-800 p-2 rounded">☕ בית קפה קפיברה</li>
+                        <li class="bg-gray-800 p-2 rounded">🎨 מוזיאון תלת-ממד</li>
+                    </ul>
+                </div>
+            `,
+            'bkk-end': `
+                <h2 class="text-3xl font-bold text-white mb-4">בנגקוק - סיום ושופינג</h2>
+                <p class="text-gray-300">קניות בקניוני ענק: MBK, Platinum, Central World. זמן מעולה להשלים קניות אחרונות לפני החזרה הביתה.</p>
+            `
+        };
+
+        function openModal(id) {
+            document.getElementById('modal-body').innerHTML = modalContent[id];
+            document.getElementById('modal-overlay').classList.remove('hidden');
+        }
+        function closeModal(event) { if(event.target.id === 'modal-overlay') forceCloseModal(); }
+        function forceCloseModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
+    </script>
+</body>
+</html>

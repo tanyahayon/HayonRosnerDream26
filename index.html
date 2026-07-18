@@ -1,133 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תאילנד 2026 - חיון ורוזנר</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        body { font-family: 'Heebo', sans-serif; background-color: #0B0C10; color: #C5C6C7; background-image: radial-gradient(circle at 15% 50%, rgba(255, 0, 255, 0.08), transparent 25%), radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.08), transparent 25%); background-attachment: fixed; }
-        h1, h2, h3 { font-family: 'Rubik', sans-serif; }
-        .neon-text-pink { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
-        .neon-text-cyan { color: #00ffff; text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; }
-        .neon-text-yellow { color: #ffff00; text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00; }
-        .neon-border-pink { border: 2px solid #ff00ff; box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
-        .neon-border-cyan { border: 2px solid #00ffff; box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
-        .neon-border-yellow { border: 2px solid #ffff00; box-shadow: 0 0 10px rgba(255, 255, 0, 0.5); }
-        .hover-grow { transition: transform 0.3s ease; }
-        .hover-grow:hover { transform: translateY(-5px); }
-        #modal-overlay { backdrop-filter: blur(5px); }
-        .modal-content-box { background: linear-gradient(135deg, #1A1A24 0%, #0B0C10 100%); }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#24113d">
+  <title>תאילנד 2026 · חיון ורוזנר</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Rubik:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--night:#130a24;--deep:#24113d;--card:#2c1749;--ink:#fff9ff;--soft:#dacdeb;--pink:#ff4fc8;--aqua:#58e7e1;--sun:#ffd36b;--ok:#7ff0aa;--line:#ffffff1f;--shadow:0 18px 50px #09030f66}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 15% 0,#5c1a6f 0,transparent 30%),radial-gradient(circle at 85% 10%,#094d64 0,transparent 28%),linear-gradient(150deg,var(--night),var(--deep));color:var(--ink);font-family:"Heebo",Arial,sans-serif;min-height:100vh}
+    h1,h2,h3,.eyebrow,.nav button,.destination,.filters button,.pack-tabs button{font-family:"Rubik","Heebo",sans-serif}button,a,input{font:inherit} button,a{touch-action:manipulation}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}.hero{padding:42px 0 20px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff 0,#ffe0f7 28%,#ffc1ed 58%,#ff7dd9 72%,transparent 73%);left:-50px;top:-42px;filter:drop-shadow(0 0 24px #ff4fc877);opacity:.88}.eyebrow{color:var(--aqua);font-weight:700;letter-spacing:.04em}.hero h1{font-size:clamp(2.3rem,7vw,5.2rem);font-weight:800;letter-spacing:-.035em;line-height:.98;margin:.2em 0 .14em;max-width:760px}.hero p{color:var(--soft);font-size:1.08rem;max-width:720px;line-height:1.75}.countdown{display:inline-flex;gap:9px;align-items:center;justify-content:center;background:#ffffff12;border:1px solid var(--line);border-radius:999px;padding:10px 16px;margin-top:9px}.countdown strong{color:var(--sun)}
+    .nav-shell{position:sticky;top:0;z-index:10;background:#130a24e8;backdrop-filter:blur(12px);border-block:1px solid var(--line)}.nav{display:flex;gap:7px;overflow:auto;padding:9px 0;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav button{display:flex;align-items:center;justify-content:center;text-align:center;border:0;background:transparent;color:var(--soft);padding:11px 16px;border-radius:999px;white-space:nowrap;cursor:pointer;min-height:44px}.nav button.active{background:linear-gradient(135deg,var(--pink),#8c5cff);color:#fff;font-weight:700;box-shadow:0 8px 24px #ff4fc833}
+    main{padding:24px 0 70px}.panel{display:none;animation:up .3s ease}.panel.active{display:block}@keyframes up{from{transform:translateY(7px);opacity:.5}}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:10px 0 16px}.section-head h2{margin:0;font-size:clamp(1.55rem,4vw,2.3rem)}.section-head p{margin:0;color:var(--soft)}
+    .ui-icon{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.icon-orb{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;color:var(--aqua);background:linear-gradient(145deg,#58e7e126,#ff4fc81c);border:1px solid #58e7e145;box-shadow:0 12px 30px #05020b55,inset 0 0 24px #ffffff0b}.icon-orb.pink{color:#ff8ddd;border-color:#ff4fc14d}.icon-orb.sun{color:var(--sun);border-color:#ffd36b50}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(145deg,#ffffff14,#ffffff08);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:var(--shadow)}.destination{position:relative;overflow:hidden;min-height:190px;cursor:pointer;text-align:center;color:var(--ink);width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:48px}.destination h3{font-size:1.55rem;margin:17px 0 5px}.destination p{color:var(--soft);margin:0;text-align:center}.destination .arrow{position:absolute;right:50%;transform:translateX(50%);bottom:17px;color:var(--aqua);white-space:nowrap}.destination.active{border-color:var(--pink);box-shadow:0 0 0 2px #ff4fc838,var(--shadow)}.detail{margin-top:14px}.detail h3{margin-top:0}.tag{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:6px 10px;border-radius:999px;background:#ffffff12;border:1px solid var(--line);color:var(--soft);margin:3px;font-size:.88rem}.tag.hot{color:#1d1025;background:var(--sun);border-color:transparent}.tag.ok{color:#092519;background:var(--ok);border-color:transparent}
+    .timeline{display:grid;gap:11px}.day{display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:start;background:#ffffff0b;border:1px solid var(--line);border-radius:18px;padding:16px}.date{color:var(--aqua);font-weight:700}.day h3{margin:0 0 5px;font-size:1.08rem}.day p{color:var(--soft);margin:0;line-height:1.65}.day button{display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid var(--line);color:var(--ink);background:#ffffff0b;border-radius:999px;padding:9px 14px;cursor:pointer;min-width:76px}.day.party{background:linear-gradient(110deg,#ff4fc828,#5a39ff22);border-color:#ff4fc866}.day.rest{opacity:.82}.day-detail{display:none;grid-column:2/-1;border-top:1px solid var(--line);padding-top:12px;color:var(--soft)}.day.open .day-detail{display:block}
+    .filters{display:flex;gap:8px;overflow:auto;margin-bottom:14px}.filters button{display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid var(--line);background:#ffffff09;color:var(--soft);border-radius:999px;padding:10px 15px;white-space:nowrap;cursor:pointer;min-height:42px}.filters button.active{background:var(--aqua);color:#10232b;border-color:transparent}.activities{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.activity h3{margin:0 0 8px}.activity p{color:var(--soft);line-height:1.65}.activity .meta{display:flex;gap:7px;flex-wrap:wrap}.activity a,.source-list a{color:var(--aqua)}.warning{border-color:#ffd36b66;background:#ffd36b0e}.avoid{border-color:#ff6c8b66;background:#ff6c8b0e}
+    .booking-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.booking{display:flex;gap:14px;align-items:start}.booking .booking-icon{width:44px;height:44px;flex:0 0 44px;border-radius:14px;display:grid;place-items:center;color:var(--aqua);background:#58e7e112;border:1px solid #58e7e132}.booking .booking-icon .ui-icon{width:23px;height:23px}.booking h3{margin:0 0 5px}.booking p{margin:0;color:var(--soft);line-height:1.6}.status{display:inline-block;margin-top:8px;padding:5px 9px;border-radius:999px;font-size:.83rem}.done{background:#7ff0aa22;color:var(--ok)}.todo{background:#ffd36b20;color:var(--sun)}
+    .checks{display:grid;gap:9px}.check{display:flex;align-items:center;gap:11px;background:#ffffff09;border:1px solid var(--line);padding:13px;border-radius:15px}.check input{width:20px;height:20px;accent-color:var(--pink)}.check:has(input:checked) span{text-decoration:line-through;color:var(--soft)}.progress{height:10px;background:#ffffff12;border-radius:99px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--pink),var(--aqua));width:0;transition:.25s}.pack-tabs{display:flex;gap:7px;overflow:auto;margin-bottom:12px}.pack-tabs button{display:flex;align-items:center;justify-content:center;text-align:center;background:#ffffff09;color:var(--soft);border:1px solid var(--line);border-radius:999px;padding:10px 14px;white-space:nowrap;min-height:42px;cursor:pointer}.pack-tabs button.active{background:var(--pink);color:#fff;box-shadow:0 8px 22px #ff4fc82e}.pack-panel{display:none}.pack-panel.active{display:block}.columns{columns:2;column-gap:14px}.columns label{break-inside:avoid;margin-bottom:8px}
+    .note{color:var(--soft);line-height:1.65}.source-list{padding-right:20px;color:var(--soft);line-height:1.8}.footer{color:var(--soft);text-align:center;padding:22px;border-top:1px solid var(--line)}
+    @media(max-width:760px){.grid,.activities,.booking-grid{grid-template-columns:1fr}.hero:after{opacity:.45}.day{grid-template-columns:78px 1fr}.day button{grid-column:2;justify-self:start}.day-detail{grid-column:1/-1}.columns{columns:1}.section-head{display:block}.section-head p{margin-top:6px}}
+  </style>
 </head>
-<body class="min-h-screen relative pb-20">
+<body>
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-palm" viewBox="0 0 24 24"><path d="M12 21c1-7 1-12-1-16"/><path d="M11 6C8 2 4 3 3 5c4-1 6 1 8 3"/><path d="M11 6c2-4 6-4 8-2-4 0-6 2-8 4"/><path d="M11 6c4-2 8 0 9 3-4-2-7-1-9 0"/><path d="M11 6C9 3 10 1 12 1c1 2 1 4-1 6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/><path d="m16 4 .4 1.2L18 6l-1.6.7L16 8l-.5-1.3L14 6l1.5-.8L16 4Z"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="m3 11 7 2 4 7 2-1-2-7 6-4c1-.7 1.3-2 .6-2.7-.7-.7-2-.5-2.7.2L12 10 5 8l-2 3Z"/></symbol>
+    <symbol id="i-ferry" viewBox="0 0 24 24"><path d="M4 17h16l-2 3H6l-2-3Z"/><path d="M7 17V8h10v9M10 8V4h4v4M2 21c2 1 4 1 6 0 2 1 4 1 6 0 2 1 4 1 8 0"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="m5 10 2-4h10l2 4 2 2v5h-2v2h-2v-2H7v2H5v-2H3v-5l2-2Z"/><path d="M5 10h14M7 14h.01M17 14h.01"/></symbol>
+    <symbol id="i-hotel" viewBox="0 0 24 24"><path d="M4 21V3h11v18M15 9h5v12M8 7h3M8 11h3M8 15h3M2 21h20"/></symbol>
+  </svg>
+  <header class="hero"><div class="wrap"><div class="eyebrow">THAILAND 2026 · חיון × רוזנר</div><h1>ירח מלא,<br>לב רגוע.</h1><p>28 לילות של קוסמוי, קופנגן ובנגקוק — בלי השכמות מיותרות, עם פעילות מרכזית אחת ביום והרבה מקום לבריכה, קניות ושינוי תוכניות.</p><div class="countdown"><svg class="ui-icon" style="width:20px;height:20px"><use href="#i-plane"/></svg> יוצאים בעוד <strong id="daysLeft">—</strong> ימים</div></div></header>
+  <div class="nav-shell"><nav class="nav wrap" aria-label="ניווט"><button class="active" data-tab="overview">המסלול</button><button data-tab="days">יום־יום</button><button data-tab="attractions">אטרקציות</button><button data-tab="bookings">הזמנות</button><button data-tab="before">לפני שטסים</button><button data-tab="packing">אריזה</button></nav></div>
+  <main class="wrap">
+    <section class="panel active" id="overview"><div class="section-head"><div><h2>הטיול במבט אחד</h2><p>לחצו על יעד כדי לראות את האופי שלו</p></div></div><div class="grid">
+      <button class="card destination" data-dest="bangkok"><span class="icon-orb sun"><svg class="ui-icon"><use href="#i-bag"/></svg></span><h3>בנגקוק</h3><p>21–22.7 · 15–18.8</p><span class="arrow">לפרטים ←</span></button>
+      <button class="card destination" data-dest="samui"><span class="icon-orb"><svg class="ui-icon"><use href="#i-palm"/></svg></span><h3>קוסמוי</h3><p>22–25.7 · 9–15.8</p><span class="arrow">לפרטים ←</span></button>
+      <button class="card destination" data-dest="phangan"><span class="icon-orb pink"><svg class="ui-icon"><use href="#i-moon"/></svg></span><h3>קופנגן</h3><p>25.7–9.8</p><span class="arrow">לפרטים ←</span></button>
+    </div><div class="card detail" id="destinationDetail"><h3>בחרו יעד</h3><p class="note">כאן יופיעו המלון, הדגשים והפעילויות המתאימות לאזור.</p></div></section>
 
-    <header class="text-center pt-12 pb-8 px-4">
-        <h1 class="text-4xl md:text-6xl font-black neon-text-yellow mb-2">THAI<span class="neon-text-pink">LAND</span> 2026</h1>
-        <h2 class="text-xl md:text-2xl font-bold text-white">משפחות חיון ורוזנר 🌴</h2>
-    </header>
+    <section class="panel" id="days"><div class="section-head"><div><h2>מסלול מאוזן</h2><p>הצעה ראשונית — פעילות מרכזית אחת בלבד ברוב הימים</p></div></div><div class="timeline" id="timeline"></div></section>
 
-    <main class="container mx-auto px-4 max-w-5xl">
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            
-            <div onclick="openModal('bkk-start')" class="cursor-pointer neon-border-cyan rounded-2xl p-6 hover-grow bg-gray-800/50 text-center">
-                <i class="fas fa-city text-3xl text-cyan-400 mb-2"></i>
-                <h4 class="text-xl font-bold text-white">בנגקוק (נחיתה)</h4>
-            </div>
+    <section class="panel" id="attractions"><div class="section-head"><div><h2>אטרקציות שמתאימות להרכב</h2><p>מסוננות לפי גיל, עומס, הזמנה ורווחת בעלי חיים</p></div></div><div class="filters"><button class="active" data-filter="all">הכול</button><button data-filter="samui">קוסמוי</button><button data-filter="phangan">קופנגן</button><button data-filter="fullday">יום שלם</button><button data-filter="animals">בעלי חיים</button><button data-filter="rain">לגשם</button></div><div class="activities" id="activities"></div></section>
 
-            <div onclick="openModal('samui-1')" class="cursor-pointer neon-border-yellow rounded-2xl p-6 hover-grow bg-gray-800/50 text-center">
-                <i class="fas fa-umbrella-beach text-3xl text-yellow-400 mb-2"></i>
-                <h4 class="text-xl font-bold text-white">קוסמוי (פתיחה)</h4>
-            </div>
+    <section class="panel" id="bookings"><div class="section-head"><div><h2>הזמנות ולוגיסטיקה</h2><p>ללא מספרי כרטיסים, תשלום או פרטים אישיים</p></div></div><div class="booking-grid">
+      <article class="card booking"><div class="booking-icon"><svg class="ui-icon"><use href="#i-plane"/></svg></div><div><h3>אל על</h3><p>21.7 תל אביב–בנגקוק<br>18.8 בנגקוק–תל אביב</p><span class="status done">סגור</span></div></article>
+      <article class="card booking"><div class="booking-icon"><svg class="ui-icon"><use href="#i-plane"/></svg></div><div><h3>בנגקוק–קוסמוי</h3><p>22.7 · Bangkok Airways<br>18:50–19:55</p><span class="status done">סגור לכולם</span></div></article>
+      <article class="card booking"><div class="booking-icon"><svg class="ui-icon"><use href="#i-plane"/></svg></div><div><h3>קוסמוי–בנגקוק</h3><p>15.8 · כדאי לבחור טיסה שמשאירה מרווח נוח למלון ולערב בבנגקוק.</p><span class="status todo">טרם נסגר</span></div></article>
+      <article class="card booking"><div class="booking-icon"><svg class="ui-icon"><use href="#i-ferry"/></svg></div><div><h3>מעבורות</h3><p>25.7 קוסמוי–קופנגן<br>9.8 קופנגן–קוסמוי</p><span class="status todo">טרם נסגר</span></div></article>
+      <article class="card booking"><div class="booking-icon"><svg class="ui-icon"><use href="#i-car"/></svg></div><div><h3>רכבים בקופנגן</h3><p>25.7–9.8 · יש חניה לשני רכבים בווילה.</p><span class="status todo">בטיפול</span></div></article>
+      <article class="card booking"><div class="booking-icon"><svg class="ui-icon"><use href="#i-hotel"/></svg></div><div><h3>מלונות</h3><p>Grand BS · Skye Beach · Sitaya Villas · Centre Point Pratunam</p><span class="status done">סגור</span></div></article>
+    </div></section>
 
-            <div onclick="openModal('phangan')" class="cursor-pointer neon-border-pink rounded-2xl p-6 hover-grow bg-gray-800/50 text-center md:col-span-2 lg:col-span-1">
-                <i class="fas fa-music text-3xl text-pink-400 mb-2"></i>
-                <h4 class="text-xl font-bold text-white">קופנגן (הוילה!)</h4>
-            </div>
+    <section class="panel" id="before"><div class="section-head"><div><h2>לפני שטסים</h2><p>הסימון נשמר במכשיר שבו משתמשים</p></div></div><div class="card"><div class="progress"><span id="taskProgress"></span></div><p class="note" id="taskText"></p><div class="checks" id="taskChecks"></div></div><article class="card detail warning"><h3>TDAC — לא ויזה</h3><p class="note">כל תשעת הנוסעים יכולים להיכלל בהגשה קבוצתית אחת. מגישים בתוך שלושת הימים שלפני ההגעה, כולל יום ההגעה, דרך האתר הרשמי בלבד. צריך פרטי דרכון, טיסה וכתובת הלילה הראשון.</p><a href="https://tdac.immigration.go.th" target="_blank" rel="noopener" style="color:var(--aqua)">לאתר הרשמי ←</a></article></section>
 
-            <div onclick="openModal('samui-2')" class="cursor-pointer neon-border-yellow rounded-2xl p-6 hover-grow bg-gray-800/50 text-center">
-                <i class="fas fa-elephant text-3xl text-yellow-400 mb-2"></i>
-                <h4 class="text-xl font-bold text-white">קוסמוי (סיבוב 2)</h4>
-            </div>
+    <section class="panel" id="packing"><div class="section-head"><div><h2>אריזה בלי כאב ראש</h2><p>רשימות נפרדות למשפחות ולתיקי הטיסה</p></div></div><div class="pack-tabs"><button class="active" data-pack="shared">משותף</button><button data-pack="hayon">משפחת חיון</button><button data-pack="rosner">משפחת רוזנר</button><button data-pack="flight">תיקי טיסה</button></div><div id="packPanels"></div><article class="card detail warning"><h3>Power Banks</h3><p class="note">לא שולחים במזוודה לבטן המטוס. שומרים בתיק היד ובודקים את מגבלת הקיבולת של כל חברת תעופה לפני היציאה.</p></article></section>
+  </main>
+  <footer class="footer">נבנה באהבה למשפחות חיון ורוזנר · גרסת תכנון 17.7.2026</footer>
 
-            <div onclick="openModal('bkk-end')" class="cursor-pointer neon-border-cyan rounded-2xl p-6 hover-grow bg-gray-800/50 text-center md:col-span-2">
-                <i class="fas fa-shopping-bag text-3xl text-cyan-400 mb-2"></i>
-                <h4 class="text-xl font-bold text-white">בנגקוק (סיום)</h4>
-            </div>
-        </div>
-    </main>
+  <script>
+    const tripDays=[
+      ['21.7','בנגקוק','נחיתה והתאוששות','מלון ליד השדה, אוכל קל ושינה. בלי אטרקציות.','rest'],
+      ['22.7','קוסמוי','טיסה והתמקמות ב־Skye Beach','בוקר רגוע; יציאה לשדה בזמן וטיסה ב־18:50.','rest'],
+      ['23.7','קוסמוי','בריכה, חוף וארוחת ערב','יום איפוס אמיתי אחרי הדרך. אפשר שוק ערב רק אם יש כוח.','rest'],
+      ['24.7','קוסמוי','Samui Elephant Sanctuary','חצי יום, רצוי מסלול צפייה ללא רחצה או רכיבה. להזמין מקום לקבוצה של תשעה.',''],
+      ['25.7','קופנגן','מעבורת, רכבים וכניסה לווילה','איסוף רכבים, קניות ראשונות והתמקמות. בערב שוק שבת בטונג סאלה אם יש כוח.','rest'],
+      ['26.7','קופנגן','יום וילה וחוף קרוב','לא לקבוע כלום אחרי המעבר.','rest'],
+      ['27.7','קופנגן','Thong Nai Pan Noi / Yai','חוף משפחתי וארוחת צהריים. יציאה מאוחרת וחזרה לפני ערב.',''],
+      ['28.7','קופנגן','יום פתוח','בריכה, כביסה וקניות. אופציה קצרה למפל Phaeng לפי מזג האוויר.','rest'],
+      ['29.7','קופנגן','חצי יום טבע','מפל Phaeng ותצפית קלה; בלי להעמיס לקראת המסיבה.',''],
+      ['30.7','קופנגן','יום קל לפני Full Moon','וילה, מנוחה, תיאום הסעה וחלוקת תפקידים לערב המסיבה.','rest'],
+      ['31.7','קופנגן','Full Moon Party','המבוגרים ובני הנוער רק לפי החלטת ההורים; הסעה סגורה מראש, נקודת מפגש ותוכנית לילדים.','party'],
+      ['1.8','קופנגן','יום התאוששות','אין תוכנית. אוכל קרוב, בריכה ושינה.','rest'],
+      ['2.8','קופנגן','שוק שבת / ערב רגוע','אם שוק 25.7 התפספס, זה הערב המתאים. היום עצמו נשאר פתוח.',''],
+      ['3.8','קופנגן','חוף Salad או Haad Yao','ים, שנורקל קל ואוכל על החוף.',''],
+      ['4.8','קופנגן','יום וילה','יום ריק בכוונה.','rest'],
+      ['5.8','קופנגן','שייט שקיעה משפחתי','רק אם הים רגוע והקבוצה רוצה; אחרת חוף קרוב.',''],
+      ['6.8','קופנגן','Bottle Beach או Thong Nai Pan','לבחור אחד בלבד בהתאם לדרך ולמצב הים.',''],
+      ['7.8','קופנגן','יום חופשי וקניות','קניות אחרונות באי והכנה למעבר.','rest'],
+      ['8.8','קופנגן','יום וילה ואריזה','ערב אחרון רגוע.','rest'],
+      ['9.8','קוסמוי','מעבורת + יום הולדת לליאם','מעבר קל, צ׳ק־אין וחגיגת ערב שהוזמנה מראש.','party'],
+      ['10.8','קוסמוי','יום בריכה וחוף','התאוששות מהמעבר ומהחגיגה.','rest'],
+      ['11.8','קוסמוי','פארק מים','יום ארוך אחד לכל המשפחה; לבדוק פתיחה ומגבלות גובה יום קודם.',''],
+      ['12.8','קוסמוי','יום פתוח / קניות','Central Samui או Fisherman’s Village, לפי מזג האוויר.','rest'],
+      ['13.8','קוסמוי','דולפינים ורודים + Pig Island','יום ים מלא. התצפית בדולפינים אינה מובטחת ותלויה במזג האוויר.',''],
+      ['14.8','קוסמוי','יום בחירה','Ang Thong רק אם כולם רוצים עוד שייט; אחרת חוף, מסאז׳ וקניות.','rest'],
+      ['15.8','בנגקוק','טיסה לבנגקוק','ללא מעבורת — אתם כבר בקוסמוי. צ׳ק־אין ב־Centre Point.','rest'],
+      ['16.8','בנגקוק','יום קניות מרכזי','Pratunam, Platinum ו־CentralWorld; עצירות אוכל ומנוחה.',''],
+      ['17.8','בנגקוק','קניון או פארק שעשועים מקורה','בחירה לפי אנרגיה: Siam, ICONSIAM או פעילות לילדים.',''],
+      ['18.8','בנגקוק','בוקר חופשי וטיסה הביתה','צ׳ק־אאוט, קנייה אחרונה ויציאה לשדה בלי לחץ.','rest']
+    ];
+    const attractions=[
+      {title:'Samui Elephant Sanctuary',place:'samui',tags:['animals'],meta:['חצי יום','לכל המשפחה','להזמין'],text:'הבחירה המועדפת לפילים. לבחור חוויה ללא רכיבה, רחצה כפויה או מופעים. לפי הערכת World Animal Protection, המקום עבר לצמצום האכלה ידנית מאפריל 2026.',link:'https://www.samuielephantsanctuary.org/'},
+      {title:'פארק מים בקוסמוי',place:'samui',tags:['fullday'],meta:['יום שלם','גיל 6+','לבדוק פתיחה'],text:'יום פעילות מרכזי אחד. יש לבדוק יום קודם שהמתקנים פתוחים ומה מגבלות הגובה; לא לבנות עליו ללא אימות טלפוני.'},
+      {title:'דולפינים ורודים + Pig Island',place:'samui',tags:['animals','fullday'],meta:['יום מלא','תלוי ים','הזמנה מומלצת'],text:'מתאים להרכב, אבל הדולפינים חיות בר ואין הבטחה לראותם. ביקורות מציינות שהים עלול להיות גלי ושינויים אפשריים.'},
+      {title:'Ang Thong Marine Park',place:'samui',tags:['fullday'],meta:['יום מלא','שייט','אופציונלי'],text:'נוף מצוין אך יום ארוך, עם מדרגות וים שעלול להיות גלי. להשאיר כאפשרות ולא כחובה.'},
+      {title:'Capybara Coffee Samui',place:'samui',tags:['animals','rain'],meta:['30 דקות','לא חובה','שיקול אתי'],text:'חוות הדעת עדכניות ומעורבות: לצד משפחות שנהנו, יש תלונות על מרחב קטן וסטרס של בעלי החיים. לכן נשאיר כאפשרות מסומנת, לא כהמלצה מובילה.',warning:true,link:'https://www.tripadvisor.com.au/Restaurant_Review-g1179396-d32889963-Reviews-Capybara_Coffee_Samui-Bophut_Ko_Samui_Surat_Thani_Province.html'},
+      {title:'Central Samui + Fisherman’s Village',place:'samui',tags:['rain'],meta:['ספונטני','אוכל קל','קניות'],text:'פתרון טוב ליום גשום או לעייפות: מזגן, אוכל מוכר לילדים ושוק ערב בלי התחייבות.'},
+      {title:'Thong Nai Pan Noi / Yai',place:'phangan',tags:[],meta:['חצי יום','משפחתי','ספונטני'],text:'חופים רגועים יחסית עם חול ומסעדות. בחירה טובה ליום אחד בלי תוכנית מורכבת.'},
+      {title:'Phaeng Waterfall',place:'phangan',tags:[],meta:['2–3 שעות','לפי מזג אוויר','נעליים'],text:'טיול טבע קצר יחסית. לא להגיע אחרי גשם כבד ולא להכריח את בני השש למסלול הארוך.'},
+      {title:'Pantip / Thong Sala Market',place:'phangan',tags:[],meta:['ערב','ספונטני','אוכל מגוון'],text:'מקום טוב לטעימות ולקבוצה עם העדפות שונות. שוק Saturday Walking Street מתאים ל־25.7, 1.8 או 8.8.'},
+      {title:'Full Moon Party',place:'phangan',tags:[],meta:['31.7.2026','למבוגרים','תכנון מראש'],text:'לא אירוע משפחתי לילדים קטנים. להסדיר הסעה הלוך וחזור, נקודת מפגש, טלפונים טעונים ולהתרחק מחבלי אש וממשקאות פתוחים.',warning:true},
+      {title:'Pun Pun Thai Food',place:'phangan',tags:[],meta:['לא מומלץ','דיווחים מישראלים'],text:'לא ייכלל בהמלצות: פורסמו בישראל תלונות מפורשות על סירוב להכניס ישראלים. חשוב להבחין בינו לבין עסקים בעלי שם דומה.',avoid:true,link:'https://www.mako.co.il/news-world/2025_q4/Article-17622890293c991027.htm'}
+    ];
+    const tasks=['השלמת TDAC קבוצתי לכל תשעת הנוסעים','הזמנת מעבורת קוסמוי–קופנגן ל־25.7','הזמנת מעבורת קופנגן–קוסמוי ל־9.8','הזמנת טיסת קוסמוי–בנגקוק ל־15.8','סגירת רכבים בקופנגן','אישור הסעה הלוך וחזור ל־Full Moon','שמירת ביטוח ומסמכי טיסה לשימוש אופליין','בדיקת יתרת מזומן וכרטיסי אשראי','הורדת מפות אופליין של קוסמוי וקופנגן'];
+    const packs={shared:['אלתוש','ערכת עזרה ראשונה','תרופות נגד בחילה','מלחים להתייבשות','קרם הגנה','שקיות כביסה','זיפלוקים','תגי מזוודה','מתאמים ומטענים'],hayon:['ערן — בגדים ותרופות אישיות','טניה — בגדים וטיפוח','ליאם — בגדים, אוזניות ומטען','אמה — בגדים להחלפה, פעילות לטיסה וצעצוע קטן'],rosner:['אמיר — בגדים ותרופות אישיות','שירן — בגדים וטיפוח','ליאל — בגדים, אוזניות ומטען','ליעוז — בגדים, אוזניות ומטען','לישי — בגדים להחלפה, פעילות לטיסה וצעצוע קטן'],flight:['דרכונים','אישורי TDAC','כרטיסי טיסה','ביטוח','תרופות קבועות','Power Banks','כבלים ומטענים','אוזניות','חטיפים','בקבוקים ריקים','מגבונים','סווטשרט דק','בגדים להחלפה לילדים']};
 
-    <div id="modal-overlay" class="fixed inset-0 bg-black/80 z-40 hidden flex items-center justify-center p-4" onclick="closeModal(event)">
-        <div id="modal-container" class="modal-content-box neon-border-pink rounded-3xl w-full max-w-2xl max-h-[85vh] overflow-y-auto relative p-8">
-            <button onclick="forceCloseModal()" class="absolute top-4 right-4 text-white hover:text-pink-500"><i class="fas fa-times text-2xl"></i></button>
-            <div id="modal-body"></div>
-        </div>
-    </div>
-
-    <script>
-        const modalContent = {
-            'bkk-start': `
-                <h2 class="text-3xl font-bold text-white mb-4">בנגקוק - נחיתה</h2>
-                <p class="text-gray-300">לילה ראשון להתאוששות במלון Grand BS. מנוחה והתארגנות לפני הטיסה לאיים.</p>
-            `,
-            'samui-1': `
-                <h2 class="text-3xl font-bold text-white mb-4">קוסמוי - התחלה</h2>
-                <div class="space-y-4 text-gray-300">
-                    <p>3 לילות ב-Skye Beach. אווירה רגועה, בריכה וים.</p>
-                </div>
-            `,
-            'phangan': `
-                <h2 class="text-3xl font-bold text-white mb-4">קופנגן - החיים הטובים</h2>
-                <div class="space-y-4 text-gray-300">
-                    <div class="bg-gray-800 p-4 rounded-xl border-l-4 border-pink-500">
-                        <h3 class="font-bold text-pink-400">🌕 מסיבת פולמון (29/07/2026)</h3>
-                        <p>האירוע המרכזי! מגיעים לחוף, צובעים את הילדים בנאון, נהנים מהאווירה והמוזיקה.</p>
-                    </div>
-                    <div class="bg-gray-800 p-4 rounded-xl border-l-4 border-yellow-500">
-                        <h3 class="font-bold text-yellow-400">🎂 יום הולדת לליאם (09/08/2026)</h3>
-                        <p>היום האחרון שלכם בקופנגן! יום חגיגי במיוחד בוילה.</p>
-                    </div>
-                    <div class="bg-gray-800 p-4 rounded-xl border-l-4 border-cyan-500">
-                        <h3 class="font-bold text-cyan-400">יעדים נוספים</h3>
-                        <ul class="list-disc pr-4 space-y-1">
-                            <li>שוק הלילה של יום שבת (חובה!)</li>
-                            <li>מפל פאנג (Phaeng Waterfall)</li>
-                        </ul>
-                    </div>
-                </div>
-            `,
-            'samui-2': `
-                <h2 class="text-3xl font-bold text-white mb-4">קוסמוי - חוויות וחיות</h2>
-                <div class="space-y-3 text-gray-300">
-                    <p>רשימת האטרקציות המבוקשת:</p>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        <li class="bg-gray-800 p-2 rounded">🐬 שייט דולפינים ורודים</li>
-                        <li class="bg-gray-800 p-2 rounded">⛵ שייט 42 האיים (Ang Thong)</li>
-                        <li class="bg-gray-800 p-2 rounded">🐘 חוות פילים טיפולית</li>
-                        <li class="bg-gray-800 p-2 rounded">🌊 פארק מים (Pink Elephant)</li>
-                        <li class="bg-gray-800 p-2 rounded">🐅 ספארי וטיגריסים</li>
-                        <li class="bg-gray-800 p-2 rounded">☕ בית קפה קפיברה</li>
-                        <li class="bg-gray-800 p-2 rounded">🎨 מוזיאון תלת-ממד</li>
-                    </ul>
-                </div>
-            `,
-            'bkk-end': `
-                <h2 class="text-3xl font-bold text-white mb-4">בנגקוק - סיום ושופינג</h2>
-                <p class="text-gray-300">קניות בקניוני ענק: MBK, Platinum, Central World. זמן מעולה להשלים קניות אחרונות לפני החזרה הביתה.</p>
-            `
-        };
-
-        function openModal(id) {
-            document.getElementById('modal-body').innerHTML = modalContent[id];
-            document.getElementById('modal-overlay').classList.remove('hidden');
-        }
-        function closeModal(event) { if(event.target.id === 'modal-overlay') forceCloseModal(); }
-        function forceCloseModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
-    </script>
+    const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)];
+    q('#daysLeft').textContent=Math.max(0,Math.ceil((new Date('2026-07-21T00:00:00+03:00')-new Date())/86400000));
+    qa('.nav button').forEach(b=>b.onclick=()=>{qa('.nav button').forEach(x=>x.classList.toggle('active',x===b));qa('.panel').forEach(p=>p.classList.toggle('active',p.id===b.dataset.tab));scrollTo({top:q('.nav-shell').offsetTop,behavior:'smooth'})});
+    const dests={bangkok:['בנגקוק · נחיתה וקניות','לילה ראשון ליד השדה, ואז שלושה לילות בסוף ליד Pratunam. המטרה: התאוששות בהתחלה וקניות מסודרות בסוף.'],samui:['קוסמוי · ימי האטרקציות','Skye Beach בשתי פעימות. כאן ימוקמו הפילים, פארק המים, דולפינים, קניות וחלופות לגשם.'],phangan:['קופנגן · הלב הרגוע של הטיול','15 לילות בווילה: הרבה ימים פתוחים, חופים, שוק שבת ו־Full Moon ב־31.7 עם יום מנוחה לפני ואחרי.']};
+    qa('[data-dest]').forEach(b=>b.onclick=()=>{qa('[data-dest]').forEach(x=>x.classList.toggle('active',x===b));let d=dests[b.dataset.dest];q('#destinationDetail').innerHTML=`<h3>${d[0]}</h3><p class="note">${d[1]}</p>`});
+    q('#timeline').innerHTML=tripDays.map((d,i)=>`<article class="day ${d[4]}"><div class="date">${d[0]}<br><small>${d[1]}</small></div><div><h3>${d[2]}</h3><p>${d[3]}</p></div><button aria-expanded="false">למה?</button><div class="day-detail">העיקרון: לא יותר מפעילות מרכזית אחת, ולא שני ימי־שיא רצופים. אפשר להזיז ימים לפי מזג האוויר בלי לפגוע בשלד הטיול.</div></article>`).join('');
+    qa('.day button').forEach(b=>b.onclick=()=>{let d=b.closest('.day');d.classList.toggle('open');b.textContent=d.classList.contains('open')?'סגור':'למה?';b.setAttribute('aria-expanded',d.classList.contains('open'))});
+    function renderActivities(filter='all'){q('#activities').innerHTML=attractions.filter(a=>filter==='all'||a.place===filter||a.tags.includes(filter)).map(a=>`<article class="card activity ${a.warning?'warning':''} ${a.avoid?'avoid':''}"><h3>${a.title}</h3><div class="meta">${a.meta.map(m=>`<span class="tag ${m.includes('לא מומלץ')?'hot':''}">${m}</span>`).join('')}</div><p>${a.text}</p>${a.link?`<a href="${a.link}" target="_blank" rel="noopener">מקור וביקורות ←</a>`:''}</article>`).join('')}
+    renderActivities();qa('[data-filter]').forEach(b=>b.onclick=()=>{qa('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));renderActivities(b.dataset.filter)});
+    const saved=JSON.parse(localStorage.getItem('thailandTasks')||'[]');q('#taskChecks').innerHTML=tasks.map((t,i)=>`<label class="check"><input type="checkbox" data-task="${i}" ${saved.includes(i)?'checked':''}><span>${t}</span></label>`).join('');
+    function progress(){let done=qa('[data-task]:checked').map(x=>+x.dataset.task);localStorage.setItem('thailandTasks',JSON.stringify(done));q('#taskProgress').style.width=`${done.length/tasks.length*100}%`;q('#taskText').textContent=`${done.length} מתוך ${tasks.length} משימות הושלמו`};qa('[data-task]').forEach(x=>x.onchange=progress);progress();
+    q('#packPanels').innerHTML=Object.entries(packs).map(([key,list])=>`<div class="pack-panel card ${key==='shared'?'active':''}" data-pack-panel="${key}"><div class="columns checks">${list.map((x,i)=>`<label class="check"><input type="checkbox"><span>${x}</span></label>`).join('')}</div></div>`).join('');qa('[data-pack]').forEach(b=>b.onclick=()=>{qa('[data-pack]').forEach(x=>x.classList.toggle('active',x===b));qa('[data-pack-panel]').forEach(x=>x.classList.toggle('active',x.dataset.packPanel===b.dataset.pack))});
+  </script>
 </body>
 </html>

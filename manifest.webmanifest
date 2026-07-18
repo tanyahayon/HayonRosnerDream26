@@ -1,0 +1,20 @@
+{
+  "name": "תאילנד 2026 · חיון ורוזנר",
+  "short_name": "תאילנד 2026",
+  "description": "המסלול המשפחתי של משפחות חיון ורוזנר בתאילנד",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#130a24",
+  "theme_color": "#24113d",
+  "icons": [
+    {
+      "src": "assets/neon-moon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
